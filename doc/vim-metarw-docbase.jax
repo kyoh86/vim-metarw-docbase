@@ -1,0 +1,56 @@
+*vim-metarw-docbase.txt*    DocBaseをVimで編集できるようにするプラグイン。
+
+==============================================================================
+目次                                             *vim-metarw-docbase-contents*
+
+- はじめに                                   |vim-metarw-docbase-introduction|
+- インストール                                    |vim-metarw-docbase-install|
+- コマンド                                       |vim-metarw-docbase-commands|
+- 設定                                            |vim-metarw-docbase-options|
+- LICENSE                                         |vim-metarw-docbase-license|
+
+==============================================================================
+インストール                                      *vim-metarw-docbase-install*
+
+`vim-plug` を使用する場合は以下の通りです。 >
+    Plug 'kyoh86/vim-metarw-docbase'
+<
+
+依存プラグインとして次の2つが必要です。
+
+vim-metarw (https://github.com/kana/vim-metarw)
+vim-docbase (https://github.com/kyoh86/vim-docbase)
+
+==============================================================================
+コマンド                                         *vim-metarw-docbase-commands*
+
+* `:e docbase:`
+  * 設定されたドメインの一覧を表示する。
+* `:e docbase:[domain]:`
+  * 指定したドメインの投稿の一覧を表示する。
+* `:e docbase:[domain]:new:`
+  * 指定したドメインの新しい投稿を作成する。
+* `:e docbase:[domain]:<post-id>:`
+  * 指定したドメインの指定の投稿を編集する。
+
+`:Edit`, `:Read`, `:Source`, `:Write` の4つのコマンドを定義するには、
+
+```vim
+call metarw#define_wrapper_commands(v:true)
+```
+
+を呼び出します。詳細は |metarw#define_wrapper_commands()| を参照してください。
+
+==============================================================================
+オプション                                        *vim-metarw-docbase-options*
+
+|vim-docbase-options| を参照してください。
+
+==============================================================================
+LICENSE                                           *vim-metarw-docbase-license*
+
+MIT License.
+
+Also see http://www.opensource.org/licenses/MIT for more information.
+
+vim:textwidth=78:tabstop=4:shiftwidth=4:expandtab:filetype=help:norl:
