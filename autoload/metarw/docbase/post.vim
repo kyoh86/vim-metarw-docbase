@@ -12,7 +12,7 @@ endfunction
 function! metarw#docbase#post#list_urn(domain) abort
   echo 'メモを読み込んでいます...'
   let l:api = docbase#api#for(a:domain)
-  return l:api.post().list_urn({'per_page': 100})
+  return map(l:api.post().list({'per_page': 100}), {_, item -> 'docbase:' . l:api.domain . ':' . item.id})
 endfunction
 
 function! metarw#docbase#post#list(domain) abort

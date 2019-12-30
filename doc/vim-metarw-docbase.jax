@@ -6,7 +6,7 @@
 - はじめに                                   |vim-metarw-docbase-introduction|
 - インストール                                    |vim-metarw-docbase-install|
 - コマンド                                       |vim-metarw-docbase-commands|
-- 設定                                            |vim-metarw-docbase-options|
+- オプション                                      |vim-metarw-docbase-options|
 - LICENSE                                         |vim-metarw-docbase-license|
 
 ==============================================================================
@@ -34,11 +34,9 @@ vim-docbase (https://github.com/kyoh86/vim-docbase)
   * 指定したドメインの指定の投稿を編集する。
 
 `:Edit`, `:Read`, `:Source`, `:Write` の4つのコマンドを定義するには、
-
-```vim
-call metarw#define_wrapper_commands(v:true)
-```
-
+>
+    call metarw#define_wrapper_commands(v:true)
+<
 を呼び出します。詳細は |metarw#define_wrapper_commands()| を参照してください。
 
 ==============================================================================
