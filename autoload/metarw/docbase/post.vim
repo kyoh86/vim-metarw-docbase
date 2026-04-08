@@ -41,7 +41,7 @@ function! metarw#docbase#post#read(urn) abort
 
   " frontmatters:
   let l:tags = map(get(l:post, 'tags', []), { _, t -> t.name })
-  let l:groups = map(get(l:post, 'groups', []), { _, g -> g.name })
+  let l:groups = map(get(l:post, 'groups', []), { _, g -> g.id })
   let l:scope = get(l:post, 'scope', v:null)
   let l:content = [
     \ '---',
